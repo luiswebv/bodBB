@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/favicon/favicon.png" type="image/png">
+    <title>Beto & Blanca - Invitación de Boda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <style>
+        html {
+            box-sizing: border-box;
+            padding: 0;
+        }
+        body {
+            font-family: "Bitter", serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-size: 18px;
+            text-align: center;
+            color: #333;
+        }
+        .container {
+            width: 100%;
+            height: 100vh;
+            overflow-x: hidden;
+            background-image: url("../images/fondo.jpg");
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .first-p {
+            margin-top: 20px;
+        }
+        .logo {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .names {
+            font-family: "Qwitcher Grypen", cursive;
+            font-weight: bold;
+            font-size: 115px;
+            margin: 20px 0;
+            color: #000000;
+        }
+        .details {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        .footer {
+            margin-top: 20px;
+            font-style: italic;
+            font-size: 14px;
+        }
+        .map img {
+            width: 360px;
+            height:  300px;
+        }
+        p {
+            font-size: 12px;
+        }
+        .event-card {
+            margin: 46px 0 60px;
+            display: flex;
+            width: 100%;
+            height: 80px;
+            position: relative;
+        }
+
+        .date {
+            width: 20%;
+            font-size: 24px;
+            margin: 49px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .day {
+            font-size: 45px;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        .month {
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        .separator {
+            position: absolute;
+            left: 25%;
+            top: 15%;
+            bottom: 0;
+            height: 85px;
+            width: 2px;
+            background-color: #000;
+        }
+
+        .details {
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .venue {
+            font-size: 14px;
+            font-weight: bold;
+            margin: 0 0 5px 0;
+        }
+
+        .event-info {
+            width: 79%;
+            position: relative;
+            left: 12px;
+            top: 6px;
+        }
+
+        .event-name {
+            font-weight: 700;
+        }
+        .address {
+            font-size: 12px;
+            margin: 0;
+            line-height: 1.2;
+        }
+        .ceremony {
+            text-align: center;
+        }
+
+        .ceremony h2 {
+            margin-bottom: 20px;
+        }
+
+        .ceremony-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .ceremony-list li {
+            margin-bottom: 10px;
+            display: flex;
+        }
+
+        .ceremony-list time {
+            font-weight: bold;
+            width: 80px; /* Ajusta este valor según sea necesario */
+            text-align: right;
+            margin-right: 15px;
+        }
+
+        .ceremony-list span {
+            flex: 1;
+        }
+        /*MEDIA QUERIES*/
+        /* MENOS DE 576PX*/
+        @media (max-width: 579px) {
+            div.container {
+                width: 96%;
+                margin: 0 auto;
+            }
+            .separator {
+                left: 22%;
+            }
+        }
+        @media (max-width: 360px) {
+            .separator {
+                left: 24%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="first-p">"Y SI ALGUNO PREVALECIERE CONTRA UNO, DOS LE RESISTIRÁN; Y CORDÓN DE TRES DOBLECES NO SE ROMPE PRONTO" - ECLESIASTÉS 4:12S</p>
+        <div class="names"><strong>Eduardo<br> & <br>Sharon</strong></div>
+        <div class="decorative-line"></div>
+        <p>PARA NOSOTROS SERÍA MUY IMPORTANTE COMPARTIR CONTIGO LA ALEGRÍA DE NUESTRA UNIÓN</p>
+        <div class="event-card">
+            <div class="date">
+              <span class="day">21</span>
+              <span class="month">DIC</span>
+            </div>
+            <div class="separator"></div>
+            <div class="event-info">
+              <p class="event-name">SALÓN DE FIESTAS AGAVE AZUL</p>
+              <p class="event-location">BLVD. SOLIDARIDAD LAS TORRES 100, <br>COL DEL PARQUE, 50180 TOLUCA DE LERDO, MÉX.</p>
+            </div>
+        </div>
+        <section class="ceremony">
+            <h2>PROGRAMA</h2>
+            <ul class="ceremony-list">
+                <li><time>4:00 PM</time> Ceremonia</li>
+                <li><time>6:00 PM</time> Recepción</li>
+                <li><time>6:40 PM</time> Comida</li>
+                <li><time>8:40 PM</time> Primer baile</li>
+                <li><time>9:00 PM</time> Pastel</li>
+                <li><time>11:00 PM</time> Fiesta</li>
+            </ul>
+        </section>
+        
+        <!-- 
+        <section class="map">
+            <img src="./images/mapa1.JPEG" alt="">
+        </section> --->
+    </div>
+</body>
+</html>
