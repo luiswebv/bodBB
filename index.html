@@ -34,6 +34,7 @@
         }
         .first-p {
             margin-top: 20px;
+            letter-spacing: 1px;
         }
         .names {
             font-family: "Qwitcher Grypen", cursive;
@@ -44,12 +45,14 @@
         }
         p {
             font-size: 12px;
+            letter-spacing: 1px;
         }
         .second-p {
             margin: 75px 0;
+            letter-spacing: 1px;
         }
         .event-card {
-            margin: 46px 0 175px;
+            margin: 46px 0 100px;
             display: flex;
             width: 100%;
             height: 80px;
@@ -74,13 +77,14 @@
 
         .month {
             font-size: 20px;
+            letter-spacing: 1px;
             text-transform: uppercase;
         }
 
         .separator {
             position: absolute;
             left: 25%;
-            top: 15%;
+            top: 10%;
             bottom: 0;
             height: 85px;
             width: 2px;
@@ -89,6 +93,7 @@
 
         .bible {
             font-weight: 700;
+            letter-spacing: 3px;
         }
 
         .event-info {
@@ -99,12 +104,16 @@
         }
 
         .event-name {
+            width: 100%;
             font-weight: 700;
+            text-align: left;
+            margin-left: 35px;
         }
-        .address {
-            font-size: 12px;
+        .event-location {
+            width: 100%;
             margin: 0;
-            line-height: 1.2;
+            text-align: left;
+            margin-left: 35px;
         }
         .ceremony {
             text-align: center;
@@ -112,17 +121,22 @@
         }
 
         .ceremony h2 {
-            margin-bottom: 20px;
+            margin-bottom: 35px;
+            letter-spacing: 1px;
         }
 
         .ceremony-list {
             list-style-type: none;
+            letter-spacing: 1px;
             padding: 0;
             margin: 0;
             display: inline-block;
             text-align: left;
         }
 
+        .fiesta {
+            margin-left: 3px;
+        }
         .ceremony-list li {
             margin-bottom: 10px;
             display: flex;
@@ -145,18 +159,37 @@
                 margin: 0 auto;
                 border: #000 solid 1px;
             }
+            .date {
+                margin-left: 15px;
+            }
         }
         @media (max-width: 579px) {
             div.container {
                 margin: 0 auto;
+                padding: 1px;
             }
             .separator {
                 left: 22%;
             }
         }
+        @media (max-width: 500px) {
+            .separator {
+                left: 20%;
+            }
+            .event-info {
+                left: 3px;
+                top: 8px;
+            }
+            .event-name {
+                margin-left: 10px;
+            }
+            .event-location {
+                margin-left: 10px;
+            }
+        }
         @media (max-width: 360px) {
             .separator {
-                left: 24%;
+                left: 20%;
             }
         }
 
@@ -177,7 +210,7 @@
             <div class="separator"></div>
             <div class="event-info">
               <p class="event-name">SALÓN DE FIESTAS AGAVE AZUL</p>
-              <p class="event-location">BLVD. SOLIDARIDAD LAS TORRES 100, <br>COL DEL PARQUE, 50180 TOLUCA DE LERDO, MÉX.</p>
+              <p class="event-location">BLVD. SOLIDARIDAD LAS TORRES 100, <br> COL DEL PARQUE, 50180 TOLUCA DE LERDO, MÉX.</p>
             </div>
         </div>
         <section class="ceremony">
@@ -188,7 +221,7 @@
                 <li><time>6:40 PM</time> Comida</li>
                 <li><time>8:40 PM</time> Primer baile</li>
                 <li><time>9:00 PM</time> Pastel</li>
-                <li><time>11:00 PM</time> Fiesta</li>
+                <li class="fiesta"><time>11:00 PM</time> Fiesta</li>
             </ul>
         </section>
         
