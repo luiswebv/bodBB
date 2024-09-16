@@ -25,47 +25,31 @@
         }
         .container {
             width: 100%;
-            height: 100vh;
             overflow-x: hidden;
             background-image: url("../images/fondo.jpg");
             background-color: rgba(255, 255, 255, 0.9);
-            padding: 10px;
+            padding: 3px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         .first-p {
             margin-top: 20px;
         }
-        .logo {
-            font-size: 24px;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
         .names {
             font-family: "Qwitcher Grypen", cursive;
             font-weight: bold;
             font-size: 115px;
-            margin: 20px 0;
+            margin: 54px 0px 65px;
             color: #000000;
-        }
-        .details {
-            margin: 20px 0;
-            font-size: 18px;
-        }
-        .footer {
-            margin-top: 20px;
-            font-style: italic;
-            font-size: 14px;
-        }
-        .map img {
-            width: 360px;
-            height:  300px;
         }
         p {
             font-size: 12px;
         }
+        .second-p {
+            margin: 75px 0;
+        }
         .event-card {
-            margin: 46px 0 60px;
+            margin: 46px 0 175px;
             display: flex;
             width: 100%;
             height: 80px;
@@ -103,17 +87,8 @@
             background-color: #000;
         }
 
-        .details {
-            padding-left: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .venue {
-            font-size: 14px;
-            font-weight: bold;
-            margin: 0 0 5px 0;
+        .bible {
+            font-weight: 700;
         }
 
         .event-info {
@@ -133,6 +108,7 @@
         }
         .ceremony {
             text-align: center;
+            margin-bottom: 40px;
         }
 
         .ceremony h2 {
@@ -163,10 +139,15 @@
             flex: 1;
         }
         /*MEDIA QUERIES*/
-        /* MENOS DE 576PX*/
+        @media (min-width: 580px) {
+            .container {
+                width: 500px;
+                margin: 0 auto;
+                border: #000 solid 1px;
+            }
+        }
         @media (max-width: 579px) {
             div.container {
-                width: 96%;
                 margin: 0 auto;
             }
             .separator {
@@ -183,10 +164,11 @@
 </head>
 <body>
     <div class="container">
-        <p class="first-p">"Y SI ALGUNO PREVALECIERE CONTRA UNO, DOS LE RESISTIRÁN; Y CORDÓN DE TRES DOBLECES NO SE ROMPE PRONTO" - ECLESIASTÉS 4:12S</p>
+        <p class="first-p">"Y SI ALGUNO PREVALECIERE CONTRA UNO, DOS LE RESISTIRÁN; Y CORDÓN DE TRES DOBLECES NO SE ROMPE PRONTO"</p>
+        <p class="bible">- ECLESIASTÉS 4:12</p>
         <div class="names"><strong>Beto<br> & <br>Blanca</strong></div>
         <div class="decorative-line"></div>
-        <p>PARA NOSOTROS SERÍA MUY IMPORTANTE COMPARTIR CONTIGO LA ALEGRÍA DE NUESTRA UNIÓN</p>
+        <p class="second-p">PARA NOSOTROS SERÍA MUY IMPORTANTE COMPARTIR CONTIGO LA ALEGRÍA DE NUESTRA UNIÓN</p>
         <div class="event-card">
             <div class="date">
               <span class="day">21</span>
