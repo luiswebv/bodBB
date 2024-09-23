@@ -9,8 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script type="module" src="./index.js"></script>
+    <script type="module" src="/index.js"></script>
     <style>
+    
         html {
             box-sizing: border-box;
             padding: 0;
@@ -161,6 +162,12 @@
         .ceremony-list span {
             flex: 1;
         }
+        .content-separator {
+            display: block;
+            width: 100%;
+            max-width:400px; 
+            margin: 20px auto;
+        }
         /*MEDIA QUERIES*/
         @media (min-width: 580px) {
             .names {
@@ -222,6 +229,9 @@
             .marco-hd {
                 display: none;
             }
+            .content-separator {
+                width: 90%;
+            }
         }
         @media (max-width: 440px) {
             .marco {
@@ -254,6 +264,8 @@
               <p class="event-location">BLVD. SOLIDARIDAD LAS TORRES 100, <br> COL DEL PARQUE, 50180 TOLUCA DE LERDO, MÉX.</p>
             </div>
         </div>
+        <img src="/images/separador.png" alt="Separador" class="content-separator">
+
         <section class="marco">
                 <!-- <h2>PROGRAMA</h2>
                 <ul class="ceremony-list">

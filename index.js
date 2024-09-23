@@ -1,3 +1,3 @@
-import { inject } from '@vercel/analytics';
+import { inject } from 'https://cdn.skypack.dev/@vercel/analytics';
 
 inject();
