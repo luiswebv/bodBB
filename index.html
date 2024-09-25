@@ -11,243 +11,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script type="module" src="/index.js"></script>
     <style>
-    
-        html {
-            box-sizing: border-box;
+        html, body {
+            height: 100%;
+            margin: 0;
             padding: 0;
         }
-        body {
-            font-family: "Bitter", serif;
-            font-optical-sizing: auto;
-            font-weight: 500;
-            font-size: 18px;
-            text-align: center;
-            background-color: #333;
-        }
-        .container {
-            width: 100%;
-            overflow-x: hidden;
-            background-image: url("../images/fondo.jpg");
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 3px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .first-p {
-            padding: 3px;
-            margin-top: 20px;
-            letter-spacing: 1px;
-        }
-        .names {
-            font-family: "Qwitcher Grypen", cursive;
-            font-weight: bold;
-            font-size: 115px;
-            margin: 54px 0px 65px;
-            color: #000000;
-        }
-        p {
-            font-size: 12px;
-            letter-spacing: 1px;
-        }
-        .second-p {
-            margin: 75px 0;
-            padding: 3px;
-            letter-spacing: 1px;
-        }
-        .event-card {
-            margin: 46px 0 90px;
-            display: flex;
-            width: 100%;
-            height: 80px;
-            position: relative;
-        }
-
-        .date {
-            width: 20%;
-            font-size: 24px;
-            margin: 49px 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .day {
-            font-size: 45px;
-            font-weight: bold;
-            line-height: 1;
-        }
-
-        .month {
-            font-size: 20px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .separator {
-            position: absolute;
-            left: 25%;
-            top: 10%;
-            bottom: 0;
-            height: 85px;
-            width: 2px;
-            background-color: #000;
-        }
-
-        .bible {
-            font-weight: 700;
-            letter-spacing: 3px;
-        }
-
-        .event-info {
-            width: 79%;
-            position: relative;
-            left: 12px;
-            top: 6px;
-        }
-
-        .event-name {
-            width: 100%;
-            font-weight: 700;
-            text-align: left;
-            margin-left: 35px;
-        }
-        .event-location {
-            width: 100%;
-            margin: 0;
-            text-align: left;
-            margin-left: 35px;
-        }
-        .marco {
-            height: 600px;
-            background-image: url("images/marco.jpg");
-            background-repeat: no-repeat;
-        }
-
-        .marco-hd {
-            height: 750px;
-            background-image: url("images/marco_hd.jpg");
-            background-repeat: no-repeat;
-        }
-        
-        .ceremony h2 {
-            margin-bottom: 35px;
-            letter-spacing: 1px;
-        }
-
-        .ceremony-list {
-            list-style-type: none;
-            letter-spacing: 1px;
-            padding: 0;
-            margin: 0;
-            display: inline-block;
-            text-align: left;
-        }
-
-        .fiesta {
-            margin-left: 3px;
-        }
-        .ceremony-list li {
-            margin-bottom: 10px;
-            display: flex;
-        }
-
-        .ceremony-list time {
-            font-weight: bold;
-            width: 80px; /* Ajusta este valor según sea necesario */
-            text-align: right;
-            margin-right: 15px;
-        }
-
-        .ceremony-list span {
-            flex: 1;
-        }
-        .content-separator {
+        iframe {
             display: block;
             width: 100%;
-            max-width:400px; 
-            margin: 20px auto;
+            height: 100%;
+            border: none;
         }
-        /*MEDIA QUERIES*/
-        @media (min-width: 580px) {
-            .names {
-                font-size: 153px;
-            }
-            .container {
-                width: 500px;
-                margin: 0 auto;
-                border: #000 solid 1px;
-            }
-            .date {
-                margin-left: 15px;
-            }
-        }
-        @media (max-width: 579px) {
-            div.container {
-                margin: 0 auto;
-                padding: 1px;
-            }
-            .separator {
-                left: 22%;
-            }
-        }
-        @media (max-width: 500px) {
-            .first-p {
-                padding: 5px;
-            }
-            .second-p {
-                padding: 5px;
-            }
-            .separator {
-                left: 20%;
-            }
-            .event-info {
-                left: 3px;
-                top: 8px;
-            }
-            .marco {
-                width: 100%;
-                height: 470px;
-                margin-left: 9%;
-            }
-            .event-name {
-                margin-left: 10px;
-            }
-            .event-location {
-                margin-left: 10px;
-            }
-        }
-        @media (min-width: 480px) {
-            .marco {
-                display: none;
-            }
-        }
-        @media (max-width: 479px) {
-            .marco {
-                margin: 30px;
-            }
-            .marco-hd {
-                display: none;
-            }
-            .content-separator {
-                width: 90%;
-            }
-        }
-        @media (max-width: 440px) {
-            .marco {
-                margin: 0px;
-            }
-        }
-        @media (max-width: 360px) {
-            .separator {
-                left: 20%;
+        @media (max-width: 768px) {
+            iframe {
+                height: 100vh; /* Mantener el 100% de la altura en dispositivos móviles */
+                width: 100%; /* Asegurar que el iframe ocupe todo el ancho */
             }
         }
 
+        @media (max-width: 480px) {
+            iframe {
+                height: 100vh;
+                width: 100%;
+            }
+        }
+        @media (max-width: 438px) {
+            iframe {
+                height: 100vh;
+                width: 100vw; 
+            }
+        }
     </style>
 </head>
+<iframe src="/contenido/NUESTRA BODA.pdf" width="100%" height="100vh " style="border:none;"></iframe>
 <body>
-    <div class="container">
+    
+    <!-- <div class="container">
         <p class="first-p">"Y SI ALGUNO PREVALECIERE CONTRA UNO, DOS LE RESISTIRÁN; Y CORDÓN DE TRES DOBLECES NO SE ROMPE PRONTO"</p>
         <p class="bible">- ECLESIASTÉS 4:12</p>
         <div class="names"><strong>Beto<br> & <br>Blanca</strong></div>
@@ -267,7 +66,6 @@
         <img src="/images/separador.png" alt="Separador" class="content-separator">
 
         <section class="marco">
-                <!-- <h2>PROGRAMA</h2>
                 <ul class="ceremony-list">
                     <li><time>4:00 PM</time> Ceremonia</li>
                     <li><time>6:00 PM</time> Recepción</li>
@@ -275,14 +73,14 @@
                     <li><time>8:40 PM</time> Primer baile</li>
                     <li><time>9:00 PM</time> Pastel</li>
                     <li class="fiesta"><time>11:00 PM</time> Fiesta</li>
-                </ul> -->
+                </ul> 
         </section>
         <section class="marco-hd"></section>
         
-        <!-- 
+         
         <section class="map">
             <img src="./images/mapa1.JPEG" alt="">
         </section> --->
-    </div>
+    </div> 
 </body>
 </html>
