@@ -16,21 +16,15 @@
             margin: 0;
             padding: 0;
         }
-        embed {
+        iframe {
             display: block;
             width: 100%;
             height: 100%;
             border: none;
         }
-        @media (max-width: 768px) {
-            embed {
-                height: 100vh; /* Mantener el 100% de la altura en dispositivos móviles */
-                width: 100%; /* Asegurar que el iframe ocupe todo el ancho */
-            }
-        }
     </style>
 </head>
-<embed src="/contenido/NUESTRA BODA.pdf" width="100%" height="100%" type="application/pdf">
+<iframe src="/contenido/NUESTRA BODA.pdf" width="100%" height="100vh " style="border:none;"></iframe>
 <body>
     
     <!-- <div class="container">
