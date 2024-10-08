@@ -4,64 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/images/favicon/favicon.png" type="image/png">
-    <title>Beto & Blanca - Invitación de Boda</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Blanca & Beto - Invitación de Boda</title>
     <script type="module" src="/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
     <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        iframe {
-            display: block;
+        #pdf-viewer {
             width: 100%;
             height: 100vh;
-            border: none;
         }
     </style>
 </head>
 <body>
-    <iframe src="/contenido/NUESTRA BODA.pdf" width="100%" height="100vh " style="border:none;"></iframe>
-    
-    <!-- <div class="container">
-        <p class="first-p">"Y SI ALGUNO PREVALECIERE CONTRA UNO, DOS LE RESISTIRÁN; Y CORDÓN DE TRES DOBLECES NO SE ROMPE PRONTO"</p>
-        <p class="bible">- ECLESIASTÉS 4:12</p>
-        <div class="names"><strong>Beto<br> & <br>Blanca</strong></div>
-        <div class="decorative-line"></div>
-        <p class="second-p">PARA NOSOTROS SERÍA MUY IMPORTANTE COMPARTIR CONTIGO LA ALEGRÍA DE NUESTRA UNIÓN</p>
-        <div class="event-card">
-            <div class="date">
-              <span class="day">21</span>
-              <span class="month">DIC</span>
-            </div>
-            <div class="separator"></div>
-            <div class="event-info">
-              <p class="event-name">SALÓN DE FIESTAS AGAVE AZUL</p>
-              <p class="event-location">BLVD. SOLIDARIDAD LAS TORRES 100, <br> COL DEL PARQUE, 50180 TOLUCA DE LERDO, MÉX.</p>
-            </div>
-        </div>
-        <img src="/images/separador.png" alt="Separador" class="content-separator">
-
-        <section class="marco">
-                <ul class="ceremony-list">
-                    <li><time>4:00 PM</time> Ceremonia</li>
-                    <li><time>6:00 PM</time> Recepción</li>
-                    <li><time>6:40 PM</time> Comida</li>
-                    <li><time>8:40 PM</time> Primer baile</li>
-                    <li><time>9:00 PM</time> Pastel</li>
-                    <li class="fiesta"><time>11:00 PM</time> Fiesta</li>
-                </ul> 
-        </section>
-        <section class="marco-hd"></section>
-        
-         
-        <section class="map">
-            <img src="./images/mapa1.JPEG" alt="">
-        </section> --->
-    </div> 
+    <div id="pdf-viewer"></div>
+    <p>Si tienes problemas para ver el PDF, puedes 
+       <a href="/contenido/NUESTRA BODA.pdf" download>descargarlo aquí</a>.
+    </p>
+    <div id="pdf-viewer"></div>
+    <script>
+        pdfjsLib.getDocument('/contenido/NUESTRA BODA.pdf').promise.then(function(pdf) {
+            pdf.getPage(1).then(function(page) {
+                var scale = 1.5;
+                var viewport = page.getViewport({scale: scale});
+                var canvas = document.createElement('canvas');
+                var context = canvas.getContext('2d');
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+                var renderContext = {
+                    canvasContext: context,
+                    viewport: viewport
+                };
+                page.render(renderContext);
+                document.getElementById('pdf-viewer').appendChild(canvas);
+            });
+        });
+    </script>
 </body>
 </html>
